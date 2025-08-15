@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
-import { NewTask } from './task/task.model';
 import { TasksService } from './tasks.service';
 
 @Component({
@@ -26,11 +25,6 @@ export class TasksComponent {
   }
  
   onCancelAddTask() {
-    this.isAddingTask = false;
-  }
-
-  onSubmitNewTask(task: NewTask) {
-    this.tasksService.addTask(task, this.userId);
     this.isAddingTask = false;
   }
 }
