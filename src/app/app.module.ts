@@ -5,16 +5,14 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { UserComponent } from "./user/user.component";
-import { TasksComponent } from "./tasks/tasks.component";
-import { TaskComponent } from "./tasks/task/task.component";
-import { NewTaskComponent } from "./tasks/new-task/new-task.component";
+import { TasksModule } from "./tasks/tasks.module";
 import { SharedModule } from "./shared/shared.module";
 
  
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, UserComponent, TasksComponent, TaskComponent, NewTaskComponent],
+    declarations: [AppComponent, HeaderComponent, UserComponent],
     bootstrap: [AppComponent],
-    imports: [BrowserModule, FormsModule, SharedModule], // BrowserModule already includes DatePipe
+    imports: [BrowserModule, FormsModule, SharedModule, TasksModule], // BrowserModule already includes DatePipe
 })
 export class AppModule {
 
